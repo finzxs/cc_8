@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>User Feedback Form (Basic)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>User Feedback Form</h1>
+    
+<!--form layout-->
+    <form id="feedback-form" novaldate>
+        <label>
+            Name *
+            <input id="name" name="name" type="email"
+            data-tooltip="Use a valid email (ex. john@usf.edu)." />
+        </label>
+
+        <label>
+        Email *
+        <input id="email" name="email" type="email"
+               data-tooltip="Use a valid email (e.g., you@usf.edu)." />
+        </label>
+
+        <label>
+        Comments * (max 300)
+        <textarea id="comments" name="comments" maxlength="300"
+                  data-tooltip="Tell us what you think. 300 characters max."></textarea>
+    </form>
+
+
+</body>
