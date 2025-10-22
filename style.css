@@ -14,3 +14,45 @@ small#char-count {
     position:absolute; background:#222; color:#fff; padding:6px 8px; border-radius:4px;
     font-size:12px; pointer-events:none; box-shadow:0 2px 6px rgba(0,0,0,.2);
 };
+
+/* From Uiverse.io by reshades — lightly adapted for this project */
+.button {
+  background-color: #ffffff00;
+  color: #3654ff;                 /* visible on light background */
+  width: 8.5em;
+  height: 2.9em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+
+  /* fixes */
+  position: relative;             /* contain the absolute SVG */
+  display: inline-flex;           /* align icon + text */
+  align-items: center;
+  gap: .5em;
+  padding-left: 2.2em;            /* room for the icon */
+}
+
+.button:hover {
+  background-color: #3654ff;
+  color: #fff;                    /* contrast on hover */
+  cursor: pointer;
+}
+
+.button svg {
+  width: 1.6em;
+  position: absolute;             /* place icon inside the button */
+  left: 0.6em;
+  top: 50%;
+  transform: translateY(-50%);    /* vertically centered */
+  transition: transform 0.6s ease;
+}
+
+.button:hover svg {
+  transform: translate(5px, -50%); /* slide right on hover */
+}
+
+.text {
+  margin: 0 1.5em;
+}
