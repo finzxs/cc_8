@@ -6,7 +6,7 @@
     <title>User Feedback Form</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body id="page">
 
     <h1>User Feedback Form</h1>
 
@@ -14,26 +14,31 @@
     <form id="feedback-form" novaldate>
         <label>
             Name *
-            <input id="name" name="name" type="email"
-            data-tooltip="Use a valid email (ex. john@usf.edu)." />
+            <input id="name" type="text" data-tooltip="Enter your full name.">
         </label>
 
         <label>
         Email *
-        <input id="email" name="email" type="email"
-               data-tooltip="Use a valid email (e.g., you@usf.edu)." />
+        <input id="email" type="email" data-tooltip="Use a valid email (e.g., you@usf.edu)." />
         </label>
 
         <label>
         Comments * (max 300)
-        <textarea id="comments" name="comments" maxlength="300"
-                  data-tooltip="Tell us what you think. 300 characters max."></textarea>
+        <textarea id="comments" maxlength="300" data-tooltip="Tell us what you think. 300 characters max."></textarea>
+        <small id="char-count">0 / 300</small>
+        </label>
+
+        <button type="submit">Submite</button>
+        <div id="errors"></div>
     </form>
 
     <!--feedback display container-->
-    <h2>Feedback Display</h2>
+    <h2>Feedback</h2>
     <div id="Feedback-Display"></div>
-</div>
 
 <!--simple tooltip-->
+    <div id="tooltip" hidden></div>
+
+    <script src="cp_1.js" defer></script>
 </body>
+</html>
